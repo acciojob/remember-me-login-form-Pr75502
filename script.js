@@ -6,9 +6,7 @@ let checkBox=document.querySelector("#checkbox")
 let submitBtn=document.querySelector("#submit")
 let exitBtn=document.querySelector("#existing")
 
-if(localStorage.getItem("name")!=null){
-		exitBtn.disabled=false;
-	}
+
 
 form.addEventListener("submit",(e)=>{
 	e.preventDefault()
@@ -23,7 +21,7 @@ form.addEventListener("submit",(e)=>{
 		localStorage.removeItem("pass")
 	}
 	if(localStorage.getItem("name")!=null){
-		exitBtn.disabled=false;
+		exitBtn.style.display="inline";
 	}
 	
 })
